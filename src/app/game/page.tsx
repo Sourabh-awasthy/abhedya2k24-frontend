@@ -2,7 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import { BackgroundBeams } from "@/components/background-beams";
+import FastMarquee from 'react-fast-marquee';
 
+const Marquee = () => {
+  return (
+    <FastMarquee direction="right" className="bg-gray-800">
+      12 Teams, 4 prizes per event-  jeetne ki maths khud laga hi lo - Prody24' . Minimal Effort, High reward  - competitions for all branches. Visit - <a className="text-blue-400" href="http://prody.istenith.com/events">prody.istenith.com </a>
+    </FastMarquee>
+  );
+};
 const Icon = ({ className, ...rest }: any) => {
   return (
     <svg
@@ -19,9 +27,12 @@ const Icon = ({ className, ...rest }: any) => {
   );
 };
 export default function BackgroundGradientDemo() {
-  return (
+  return (<>
+    <Marquee />
     <div className="flex flex-col  items-center gap-5">
       <BackgroundBeams />
+      
+      
       <span className="text-4xl mt-6">Level Number Here</span>
       <div className="border my-auto bg-[#151515] rounded shadow border-white/[0.2] flex flex-col items-center max-w-[80vw] mt-8 gap-6 mx-auto p-4  h-[43rem]  ">
         <div>
@@ -53,5 +64,6 @@ export default function BackgroundGradientDemo() {
         </div>
       </div>
     </div>
+    </>
   );
 }

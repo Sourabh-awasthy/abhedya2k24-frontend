@@ -59,6 +59,7 @@ export default function SignupFormDemo() {
           Sign up &rarr;
           <BottomGradient />
         </button>
+        <h1>If you can </h1>
         </div> 
 
       
